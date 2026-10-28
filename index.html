@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VetCare Clinic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="logo"><b>VetCare</b> Clinic</div>
+  <button class="burger" id="burger">☰</button>
+  <nav id="nav">
+    <a href="#services">Services</a>
+    <a href="#staff">Staff</a>
+    <a href="#contacts">Contacts</a>
+    <a href="#" class="cta-header">Call Doctor 24/7</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Professional Care for Your Pets</h1>
+    <p>Professional veterinary care with love and modern equipment.</p>
+    <a href="#appointment" class="cta-hero">Make an Appointment</a>
+  </div>
+  <div class="hero-img">
+    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800" alt="vet">
+  </div>
+</section>
+
+<section class="grid" id="services">
+  <article class="card"><img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?w=500"><h3>Therapy</h3><p>Full diagnostics</p></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500"><h3>Surgery</h3><p>Safe surgery</p></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500"><h3>Vaccination</h3><p>Prevention</p></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500"><h3>Dentistry</h3><p>Cleaning and treatment</p></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500"><h3>Lab</h3><p>Blood tests</p></article>
+  <article class="card"><img src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=500"><h3>Grooming</h3><p>Hygiene and care</p></article>
+</section>
+
+<section class="feedback" id="appointment">
+  <h2>Book appointment</h2>
+  <form>
+    <input type="text" placeholder="Pet's Name" required>
+    <input type="text" placeholder="Pet Species" required>
+    <input type="tel" placeholder="Owner's Phone" required>
+    <input type="email" placeholder="Owner's Email" required>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+      <input type="date" required>
+      <input type="text" placeholder="Дата ММ/ГГ" pattern="\d{2}/\d{2}" required>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer id="contacts">
+  <div>
+    <p><b>Emergency:</b> +7 700 000 00 00</p>
+    <p>Almaty, Abay 10 | WhatsApp, Telegram</p>
+  </div>
+  <div>
+    <button id="theme">Night mode 🌙</button>
+    <p>© 2026 VetCare Clinic</p>
+  </div>
+</footer>
+
+<script>
+const burger=document.getElementById('burger');
+const nav=document.getElementById('nav');
+burger.onclick=()=>nav.classList.toggle('open');
+document.getElementById('theme').onclick=()=>document.body.classList.toggle('dark');
+</script>
+</body>
+</html>
